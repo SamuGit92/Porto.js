@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Porto.js | Home</title>    
+    
+    
+    <link rel="stylesheet" href="examples/css/bootstrap.min.css">
+    <link rel="stylesheet" href="examples/css/common.css">
+    
+    <link rel="stylesheet" href="assets/jquery.porto.css">
+    
+    <!--JS-->
+    <script src="examples/js/jquery-1.11.2.js"></script>
+    <script src="examples/js/rd-smoothscroll.min.js"></script>	
+</head>
+<body>
+    
+<!--navigation-->
+<nav class="navbar navbar-default navbar-fixed-top PF-navbar">
+<div class="container-fluid PF-navcontainer">
+<div class="navbar-header PF-navbar-header">
+<a class="navbar-toggle collapsed PF-collapsed-icon" data-toggle="collapse" data-target="#porto-nav" aria-expanded="false"><i class="fa fa-bars fa-2x"></i></a>    
+<a class="navbar-brand PF-brand" style="color: #208F5C;" href="">Porto.js</a>
+</div>
+
+
+<div class="collapse navbar-collapse PF-nav-collapse" id="porto-nav">     
+<ul class="nav navbar-nav navbar-right PF-navbar-ul">
+<li><a href="index.html">Home</a></li>
+<li><a href="examples/examples.html">Examples</a></li>
+<li><a href="examples/options.html">Options</a></li>
+<li><a href="">Download</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<div class="container-fluid portfolio-wrapper PF-fst">
+
+ <div class="porto">
+  <div class="pf" data-pf-image="examples/images/1.jpg"></div>
+  <div class="pf" data-pf-image="examples/images/2.jpg"></div>
+  <div class="pf" data-pf-image="examples/images/3.jpg"></div>
+  <div class="pf" data-pf-image="examples/images/4.jpg"></div>
+  <div class="pf" data-pf-image="examples/images/5.jpg"></div>
+  <div class="pf" data-pf-image="examples/images/6.jpg"></div>
+  <div class="pf" data-pf-image="examples/images/7.jpg"></div>
+  <div class="pf" data-pf-image="examples/images/8.jpg"></div>
+</div>  
+    
+</div>
+    
+<div class="container PF-container">
+
+<h2 class="font-header-large color-darkash">Introduction <small class="color-yellow"></small></h2>
+<p class="font-para-15 color-darkblue">
+    Porto.js is a great jQuery plugin for adding customized image or video portfolios to your website. It only supports for the sites that build up with the bootstrap framework. It helps you to display your projects, client logos, photography, or any other pictures or videos of your choice in a much more productive way.
+</p>
+    
+<div class="">
+   <ul>
+      <li><p>Fully responsive - will adapt to any device</p></li>
+      <li><p>Portfolios can contain images or videos</p></li>
+      <li><p>Captions can be added on to portfolio</p></li>
+      <li><p>Uses CSS transitions for image and video animation</p></li>
+      <li><p>Images and Videos can be viewed in a popup window</p></li>
+      <li><p>Small file size, simple to implement</p></li>
+      <li><p>Browser support: Firefox, Chrome, Opera</p></li>
+      <li><p>Number of customized options</p></li>
+   </ul>
+</div>
+    
+<p class="font-para-15 color-darkblue">
+    If you read our <a href="examples/options.html">options</a> page we have provided instructions  in step by step to use the various features and functionality of this plugin.
+</p>
+</div>
+    
+    
+<div class="container PF-container">
+<h2 class="font-header-large color-darkash">How to <small class="color-green">install</small></h2> 
+<h4 class="font-sub-20">1. Including Files</h4>
+<p class="font-para-15 color-darkblue">
+    First and most important thing is, that including jQuery library and bootstrap files. Then link the Porto.js CSS and Javascript file.
+</p>
+
+<pre class="PF-code-container">
+<span class="PF-font-coment">&lt;!-- jQuery library --&gt;</span>
+<span class="PF-font-tag">&lt;script</span><span> </span><span class="PF-font-attribute">src</span><span class="PF-font-sign">=</span><span class="PF-font-value">"js/jquery-1.11.2.js"</span><span class="PF-font-tag">&gt;&lt;/script&gt;</span>
+
+<span class="PF-font-coment">&lt;!-- bootstrap Javascript file --&gt;</span>
+<span class="PF-font-tag">&lt;script</span><span> </span><span class="PF-font-attribute">src</span><span class="PF-font-sign">=</span><span class="PF-font-value">"js/bootstrap.min.js"</span><span class="PF-font-tag">&gt;&lt;/script&gt;</span>
+
+<span class="PF-font-coment">&lt;!-- porto Javascript file --&gt;</span>
+<span class="PF-font-tag">&lt;script</span><span> </span><span class="PF-font-attribute">src</span><span class="PF-font-sign">=</span><span class="PF-font-value">"js/jquery.porto.js"</span><span class="PF-font-tag">&gt;&lt;/script&gt;</span>
+
+<span class="PF-font-coment">&lt;!-- bootstrap CSS file --&gt;</span>
+<span class="PF-font-tag">&lt;link</span><span> </span><span> </span><span class="PF-font-attribute">href</span><span class="PF-font-sign">=</span><span class="PF-font-value">"css/bootstrap.min.css"</span><span> </span><span class="PF-font-attribute">rel</span><span class="PF-font-sign">=</span><span class="PF-font-value">"stylesheet"</span><span> </span><span class="PF-font-tag">/&gt;</span>
+
+<span class="PF-font-coment">&lt;!-- porto CSS file --&gt;</span>
+<span class="PF-font-tag">&lt;link</span><span> </span><span> </span><span class="PF-font-attribute">href</span><span class="PF-font-sign">=</span><span class="PF-font-value">"css/jquery.porto.css"</span><span> </span><span class="PF-font-attribute">rel</span><span class="PF-font-sign">=</span><span class="PF-font-value">"stylesheet"</span><span> </span><span class="PF-font-tag">/&gt;</span>
+
+</pre>
+ 
+<h4 class="font-sub-20">2. HTML Structure</h4>    
+<p class="font-para-15 color-darkblue">For each portfolio need to create one <code>&lt;div class="porto"&gt;</code> element with <code>&lt;div class="pf"&gt;</code> tags inside it as much as you need to display boxes. Inside each of these divs should contain data attributes   to hold the information about portfolio as follows. Note that only <code>"data-pf-image"</code> is necessary and others can be added as your choice. Check the <a href="examples/examples.html">examples</a> for more information about HTML structure.</p> 
+    
+<pre class="PF-code-container">
+<span class="PF-font-tag">&lt;div</span><span> </span><span class="PF-font-attribute">class</span><span class="PF-font-sign">=</span><span class="PF-font-value">"porto"</span><span class="PF-font-tag">&gt;</span>
+<span>  </span><span class="PF-font-tag">&lt;div</span><span> </span><span class="PF-font-attribute">class</span><span class="PF-font-sign">=</span><span class="PF-font-value">"pf"</span><span> </span><span class="PF-font-attribute">data-pf-image</span><span class="PF-font-sign">=</span><span class="PF-font-value">"images/1.jpg"</span><span> </span><span class="PF-font-attribute">data-pf-title</span><span class="PF-font-sign">=</span><span class="PF-font-value">"Title"</span><span> </span><span class="PF-font-attribute">data-pf-caption</span><span class="PF-font-sign">=</span><span class="PF-font-value">"Caption"</span><span> </span><span class="PF-font-attribute">data-pf-onclick</span><span class="PF-font-sign">=</span><span class="PF-font-value">"URL"</span><span class="PF-font-tag">&gt;</span><span class="PF-font-tag">&lt;/div&gt;</span>
+<span>  </span><span class="PF-font-tag">&lt;div</span><span> </span><span class="PF-font-attribute">class</span><span class="PF-font-sign">=</span><span class="PF-font-value">"pf"</span><span> </span><span class="PF-font-attribute">data-pf-image</span><span class="PF-font-sign">=</span><span class="PF-font-value">"images/2.jpg"</span><span> </span><span class="PF-font-attribute">data-pf-title</span><span class="PF-font-sign">=</span><span class="PF-font-value">"Title"</span><span> </span><span class="PF-font-attribute">data-pf-caption</span><span class="PF-font-sign">=</span><span class="PF-font-value">"Caption"</span><span> </span><span class="PF-font-attribute">data-pf-onclick</span><span class="PF-font-sign">=</span><span class="PF-font-value">"URL"</span><span class="PF-font-tag">&gt;</span><span class="PF-font-tag">&lt;/div&gt;</span>
+<span>  </span><span class="PF-font-tag">&lt;div</span><span> </span><span class="PF-font-attribute">class</span><span class="PF-font-sign">=</span><span class="PF-font-value">"pf"</span><span> </span><span class="PF-font-attribute">data-pf-image</span><span class="PF-font-sign">=</span><span class="PF-font-value">"images/3.jpg"</span><span> </span><span class="PF-font-attribute">data-pf-title</span><span class="PF-font-sign">=</span><span class="PF-font-value">"Title"</span><span> </span><span class="PF-font-attribute">data-pf-caption</span><span class="PF-font-sign">=</span><span class="PF-font-value">"Caption"</span><span> </span><span class="PF-font-attribute">data-pf-onclick</span><span class="PF-font-sign">=</span><span class="PF-font-value">"URL"</span><span class="PF-font-tag">&gt;</span><span class="PF-font-tag">&lt;/div&gt;</span>
+<span>  </span><span class="PF-font-tag">&lt;div</span><span> </span><span class="PF-font-attribute">class</span><span class="PF-font-sign">=</span><span class="PF-font-value">"pf"</span><span> </span><span class="PF-font-attribute">data-pf-image</span><span class="PF-font-sign">=</span><span class="PF-font-value">"images/4.jpg"</span><span> </span><span class="PF-font-attribute">data-pf-title</span><span class="PF-font-sign">=</span><span class="PF-font-value">"Title"</span><span> </span><span class="PF-font-attribute">data-pf-caption</span><span class="PF-font-sign">=</span><span class="PF-font-value">"Caption"</span><span> </span><span class="PF-font-attribute">data-pf-onclick</span><span class="PF-font-sign">=</span><span class="PF-font-value">"URL"</span><span class="PF-font-tag">&gt;</span><span class="PF-font-tag">&lt;/div&gt;</span>
+<span class="PF-font-tag">&lt;/div&gt;</span>
+
+</pre>
+    
+<h4 class="font-sub-20">3. Initialization</h4>    
+<p class="font-para-15 color-darkblue">Call .porto() on <code>&lt;div class="porto"&gt;</code>. If you have different class name make sure to call the function with that class. </p>  
+    
+<pre class="PF-code-container">
+<span class="PF-font-jstag">$(document).</span><span class="websam-font-jscall">ready</span><span class="PF-font-jstag">(</span><span class="PF-font-jsfun">function</span><span class="PF-font-jstag"> () {</span>
+<span>  </span><span class="PF-font-jstag">$('.porto').</span><span class="PF-font-jscall">porto</span><span class="PF-font-jstag">();</span>
+<span class="PF-font-jstag">});</span>
+
+</pre>
+<p class="font-para-15 color-darkblue">Check the <a href="examples/examples.html">examples</a> for more information on customization.</p>
+    
+</div>
+   
+    
+    
+<div class="container PF-container">
+    
+    
+    
+    
+</div>
+    
+    
+    
+    
+    
+    
+<!--javascripts-->
+<script src="examples/js/bootstrap.min.js"></script>
+<script src="assets/jquery.porto.js"></script>
+    
+<script>
+$(document).ready(function () {
+  $('.porto').porto();
+}); 
+</script>
+    
+    
+</body>
+</html>
