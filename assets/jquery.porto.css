@@ -1,0 +1,820 @@
+/**
+ * Porto.js - Image and video portfolio plugin for your bootstrap website
+ * 
+ * Copyright 2016, Samu Abeynayake
+ *
+ * Released under the MIT license - http://opensource.org/licenses/MIT
+ */
+
+/*@import url(https://fonts.googleapis.com/css?family=Montserrat);*/
+
+/*Portfolio CSS*/
+
+
+.body-overflow-hidden{
+/*    overflow: hidden;*/
+}
+
+.body-overflow-auto{
+/*    overflow: auto;*/
+}
+
+.pf-wrapper{		
+    transition: 0.4s all linear;
+}
+
+.pf-wrapper-gap{
+    padding: 5px; 
+}
+
+.pf-wrapper-nogap{
+    padding: 0px;
+}
+
+.pf-container{
+    position: relative;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+	height: 100%; 
+}
+
+.pf-img{
+    display: block;
+    max-width: 100%;
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+    margin: 0px;
+    background: url('images/icons/preloader.gif') no-repeat;
+    background-position: center;
+}
+
+.pf-vid{
+    display: block;
+    max-width: 100%;
+	width: 100%;
+	height: auto;
+    padding: 0px;
+    margin: 0px;
+    background: url('images/icons/preloader.gif') no-repeat;
+    background-position: center;
+}
+
+.pf-caption{  
+    padding: 20px;
+    transition: all ease .25s;
+    text-align: center;
+    display: none;
+    margin: 0 auto;    
+}
+
+.pf-caption-display{
+    display: block;
+}
+
+.pf-caption-fit{
+    position: absolute;
+    left: 0px; top: 0px; right: 0px; bottom: 0px; 
+    width: 100%;
+    height: 100%;
+}
+
+.pf-caption-nofit{
+    position: absolute;
+    left: 5%; top: 5%; right: 5%; bottom: 5%;     
+    width: 90%;
+    height: 90%;
+}
+
+.pf-caption:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.pf-caption-inner{  
+  display: inline-block;
+  vertical-align: middle;
+  width: 90%;
+  text-align: center;
+}
+
+.pf-caption-title{   
+  font-size: 18px;
+  word-wrap: break-all;
+  white-space:normal;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pf-caption-text{    
+  font-size: 12px;
+  word-wrap: break-all;
+  white-space:normal;
+  font-family: 'Montserrat', sans-serif;   
+}
+
+.pf-icon{
+  width: 50px;
+  height: 50px;
+  background-image: url(images/icons/pficon.png);
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+}
+
+
+/*Popup modal CSS*/
+.pf-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1100;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: auto;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  padding-top: 40px;
+  
+}
+
+.pf-modal::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+
+.pf-modal.is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.pf-modal-container {
+  position: relative;
+  width: 90%;
+  margin: 2em auto;
+  background: #FFF;
+  border-radius: .25em .25em .4em .4em;
+  border: 15px solid #fff;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-40px);
+  -moz-transform: translateY(-40px);
+  -ms-transform: translateY(-40px);
+  -o-transform: translateY(-40px);
+  transform: translateY(-40px);
+  
+  -webkit-backface-visibility: hidden;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.pf-modal-large{
+    max-width: 1024px;
+}
+
+.pf-modal-medium{
+    max-width: 768px;
+}
+
+.pf-modal-small{
+    max-width: 480px;
+}
+
+.pf-modal .pf-modal-close {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 40px;
+  height: 40px;
+}
+
+@media only screen and (min-width : 200px) {
+    .pf-modal .pf-modal-close {
+      position: absolute;
+      top: 4%;
+      right: 6%;
+    }
+}
+
+@media only screen and (min-width : 320px) {
+    .pf-modal .pf-modal-close {
+      position: absolute;
+      top: 4%;
+      right: 4%;
+    }
+}
+
+
+@media only screen and (min-width : 480px) {
+    .pf-modal .pf-modal-close {
+      position: absolute;
+      top: 4%;
+      right: 3%;
+    }
+}
+
+
+@media only screen and (min-width : 768px) {
+    .pf-modal .pf-modal-close {
+      position: absolute;
+      top: 3%;
+      right: 1%;
+    }
+}
+
+
+
+.is-visible .pf-modal-container {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+
+@media only screen and (min-width: 1170px) {
+/*
+  .pf-modal-container {
+    margin: 4.5em auto;
+  }
+*/
+}
+
+.pf-modal-img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%; 
+    background: url('images/icons/preloader.gif') no-repeat;
+    background-position: center;
+    display: none;
+}
+
+.pf-modal-vid{
+    width: 100%;
+    height: 70vh;   
+    max-width: 100%;
+    background: url('images/icons/preloader.gif') no-repeat;
+    background-position: center; 
+    display: none;
+}
+
+.pf-modal-active{
+    display: block;
+}
+
+.pf-modal-close-bt {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;                
+}
+
+.pf-modal-close-bt:hover,
+.pf-modal-close-bt:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.pf-modal-header{
+    padding: 0px;
+    margin: 0px;
+    height: 45px;
+    border-radius: 0px; 
+    border: none;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+.pf-modal-button{
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+    margin: 0px; 
+    opacity:1;
+    color: #000;
+    font-size: 28px;
+    background-color: #fff;  
+}
+
+.pf-modal-button:hover, .pf-modal-button:active, .pf-modal-button:focus {
+  background-color: #fff;
+  opacity:1;
+}
+
+.pf-modal-icon-close{
+    padding: 0px;
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-image: url('images/icons/close.png');
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position: center center;
+}
+
+.pf-modal-control{
+    width: 20%;
+    height: 40%;
+    background-color: transparent;    
+    position: absolute;
+    top: 30%;
+    bottom: 30%;
+    
+}
+
+.pf-modal-control-left{
+    left: 1%;
+}
+
+.pf-modal-control-right{
+    right: 1%;
+}
+
+.pf-modal-nav{
+    width: 35px;
+    height: 35px;
+    padding: 0px;
+    margin: 0px; 
+    font-size: 35px;   
+    position: absolute;
+    top: 45%;
+}
+
+.pf-modal-nav-left{
+    left: 2%;  
+}
+
+.pf-modal-nav-right{    
+    right: 2%; 
+}
+
+.pf-modal-nav-left-hidden{
+    visibility: hidden;
+}
+
+.pf-modal-nav-right-hidden{
+    visibility: hidden;
+}
+
+.pf-modal-nav-left-visible{
+    visibility: visible;
+}
+
+.pf-modal-nav-right-visible{
+    visibility: visible;
+}
+
+.pf-modal-icon-left{
+    padding: 0px;
+    margin: 0px;
+    width: 35px;
+    height: 35px;
+    background-image: url('images/icons/prev.png');
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.pf-modal-icon-right{
+    padding: 0px;
+    margin: 0px;
+    width: 35px;
+    height: 35px;
+    background-image: url('images/icons/next.png');
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.pf-modal-control-left:hover .pf-modal-nav-left-hidden{
+    visibility: visible;
+}
+
+.pf-modal-control-right:hover .pf-modal-nav-right-hidden{
+    visibility: visible;
+}
+
+
+
+/*Portfolio css effects*/
+
+/*1. pf-zoomin*/
+
+.pf-zoomin-img {
+    -webkit-transition: all 1s ease;
+    -mos-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.pf-zoomin-container{
+    overflow:hidden;
+}
+
+.pf-zoomin-container:hover .pf-zoomin-img {
+    -webkit-transform:scale(1.2);
+    -mos-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+.pf-zoomin-container:hover .pf-caption{ 
+    display: inline-block;
+}
+
+/*2. pf-zoomout*/
+
+.pf-zoomout-img {
+    -webkit-transform:scale(1.3);
+    -mos-transform:scale(1.3);
+    -o-transform:scale(1.3);
+    transform:scale(1.3);
+    
+    -webkit-transition: all 1s ease;
+    -mos-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.pf-zoomout-container{
+    overflow:hidden;
+}
+
+.pf-zoomout-container:hover .pf-zoomout-img {
+    -webkit-transform:scale(1.2);
+    -mos-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+.pf-zoomout-container:hover .pf-caption{ 
+    display: inline-block;
+}
+
+
+/*pf-flip*/
+
+.pf-flip-wrapper{
+    position: relative;
+    perspective: 800px;
+}
+
+.pf-flip-img{  
+       backface-visibility: hidden;
+}
+
+.pf-flip-container{
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+/*3. pf-flip-left*/
+
+.pf-flip-left-wrapper:hover .pf-flip-container {
+    transform: rotateY(180deg);  
+}
+
+.pf-flip-left-caption{    
+    transform: rotateY(180deg);
+    display: inline-block;
+    backface-visibility: hidden;
+}
+
+/*4. pf-flip-right*/
+
+.pf-flip-right-wrapper:hover .pf-flip-container {
+    transform: rotateY(-180deg);  
+}
+
+.pf-flip-right-caption{    
+    transform: rotateY(-180deg);
+    display: inline-block;
+    backface-visibility: hidden;
+}
+
+
+/*5. pf-flip-up*/
+
+.pf-flip-up-wrapper:hover .pf-flip-container {
+    transform: rotateX(180deg);    
+}
+
+.pf-flip-up-caption{
+    transform: rotateX(180deg);
+    display: inline-block;
+    backface-visibility: hidden;
+}
+
+
+/*6. pf-flip-down*/
+
+.pf-flip-down-wrapper:hover .pf-flip-container {
+    transform: rotateX(-180deg);    
+}
+
+.pf-flip-down-caption{
+    transform: rotateX(-180deg);
+    display: inline-block;
+    backface-visibility: hidden;
+}
+
+/*7. pf-flip-rotate*/
+
+.pf-flip-rotate-container{
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    transform-origin: right center;
+}
+
+.pf-flip-rotate-caption{
+    transform: rotateY(180deg);
+    display: inline-block;
+    backface-visibility: hidden;
+}
+
+.pf-flip-rotate-wrapper:hover .pf-flip-rotate-container {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+
+/*8. pf-fade*/
+
+.pf-fade-caption{
+    opacity:0;    
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    display: inline-block;
+}
+
+.pf-fade-container:hover .pf-fade-caption{
+    opacity:1;
+}
+
+/*9. pf-popup*/
+
+.pf-popup-caption{
+    display: inline-block;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+    
+}
+
+.pf-popup-container:hover .pf-popup-caption{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+/*10. pf-slide-up*/
+
+.pf-slide-up-container{
+    overflow: hidden;
+}
+
+.pf-slide-up-caption{
+    margin-top: 100%;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    display: inline-block;
+}
+
+.pf-slide-up-container:hover .pf-slide-up-caption {
+    margin-top: 0%;
+}
+
+/*11. pf-slide-down*/
+
+.pf-slide-down-container{
+    overflow: hidden;
+}
+
+.pf-slide-down-caption{
+    margin-top: -100%;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    display: inline-block;
+}
+
+.pf-slide-down-container:hover .pf-slide-down-caption {
+    margin-top: 0%;
+}
+
+/*12. pf-slide-left*/
+
+.pf-slide-left-container{
+    overflow: hidden;
+}
+
+.pf-slide-left-caption{
+    margin-left: 100%;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    display: inline-block;
+}
+
+.pf-slide-left-container:hover .pf-slide-left-caption {
+    margin-left: 0%;
+}
+
+/*13. pf-slide-right*/
+
+.pf-slide-right-container{
+    overflow: hidden;
+}
+
+.pf-slide-right-caption{
+    margin-left: -100%;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    display: inline-block;
+}
+
+.pf-slide-right-container:hover .pf-slide-right-caption {
+    margin-left: 0%;
+}
+
+
+
+/*14. pf-move-left*/
+
+.pf-move-left-container{
+    overflow: hidden;
+}
+
+.pf-move-left-img{ 
+    margin-left: 0%;    
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.pf-move-left-caption{
+    margin-left: 100%;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    display: inline-block;
+}
+
+.pf-move-left-container:hover .pf-move-left-caption {
+    margin-left: 0%;
+}
+
+.pf-move-left-container:hover .pf-move-left-img {
+    margin-left: -100%;
+}
+
+/*15. pf-move-right*/
+
+.pf-move-right-container{
+    overflow: hidden;
+}
+
+.pf-move-right-img{ 
+    margin-left: 0%;    
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.pf-move-right-caption{
+    margin-left: -100%;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    display: inline-block;
+}
+
+.pf-move-right-container:hover .pf-move-right-caption {
+    margin-left: 0%;
+}
+
+.pf-move-right-container:hover .pf-move-right-img {
+    margin-left: 100%;
+}
+
+/*16. pf-hide*/
+
+.pf-hide-container:hover .pf-hide-img{    
+	-webkit-transform:scale(0,0);
+	-moz-transform:scale(0,0);
+	-ms-transform:scale(0,0);
+	-o-transform:scale(0,0);    
+    transition-timing-function: ease-in;
+    transition-duration: 250ms;
+    transition: 0.6s all linear; 
+}
+
+.pf-hide-container:hover .pf-hide-caption{
+    display: inline-block;
+}
+
+/*caption element animation*/
+
+.pf-animate-caption{
+    margin-top: -50px;
+     -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+.pf-caption:hover .pf-animate-caption{
+    margin-top: 0px;
+}
+
+
+@media only screen and (max-width : 992px) {
+    .col-pf-6{
+        width: 33.333333333%;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .col-pf-6{
+        width: 50%;
+    }
+ 
+}
+
+@media only screen and (max-width : 500px) {
+    .pf-caption-title{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .col-pf-6{
+        width: 100%;
+    }
+    
+    .pf-caption-title{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width : 200px) {
+    .pf-modal-vid{        
+        height: auto;         
+    }
+}
+
+@media only screen and (min-width : 320px) {
+    .pf-modal-vid{
+        height: 30vh;         
+    }    
+}
+
+@media only screen and (min-width : 480px) {
+    .pf-modal-vid{
+        height: 40vh;         
+    }
+}
+
+
+@media only screen and (min-width : 540px) {
+    .pf-modal-vid{
+        height: 50vh;         
+    }
+}
+
+@media only screen and (min-width : 768px) {
+    .pf-modal-vid{
+        height: 60vh;         
+    }
+}
+
+@media only screen and (min-width : 992px) {
+    .pf-modal-vid{
+        height: 70vh;         
+    }
+}
+
+
