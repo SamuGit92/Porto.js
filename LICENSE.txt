@@ -1,0 +1,7 @@
+/**
+ * Porto.js - Image and video portfolio plugin for your bootstrap website
+ * 
+ * Copyright 2016, Samu Abeynayake
+ *
+ * Released under the MIT license - http://opensource.org/licenses/MIT
+ */
