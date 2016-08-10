@@ -1,0 +1,383 @@
+a:hover{
+    text-decoration: none;
+}
+
+.portfolio-wrapper{
+    padding-top: 20px;
+    padding-bottom: 20px;    
+}
+
+.PF-container{
+    padding: 20px 35px;
+}
+
+.PF-container-z{
+    padding: 0px 35px 0px 25px;
+}
+
+.PF-fst{
+    margin-top: 100px;
+}
+
+.PF-nopadding{
+    padding: 0px;
+}
+
+.PF-top-padding{
+    padding-top: 250px;
+}
+
+.PF-side-padding{
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+.PF-top-marge{
+   padding-top: 15px;
+}
+
+.PF-code-container{
+    padding: 20px;
+    padding-bottom: 0px;
+    margin: 0px;
+    margin-bottom: 50px;
+}
+
+.PF-code-container-short{
+    padding: 20px;
+    padding-bottom: 0px;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+.PF-example-container{
+    height: 600px;
+    margin: 0px;
+    padding: 0px 0px 0px 15px;
+    margin-right: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #ccc;
+}
+
+.PF-example-container::-webkit-scrollbar {
+    display: none;
+}
+
+@media only screen and (max-width : 768px) {
+    
+    .PF-example-container{
+        
+        margin-right: 0px;
+
+    }
+    
+    
+}
+
+.PF-cover-img{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*code fonts*/
+.PF-font-coment{
+    color: #262B36;
+	padding: 0px;
+	margin: 0px 0px;    
+	font-size: 16px;
+	word-wrap: break-all;
+	white-space:normal;
+	font-weight: bold;
+}
+
+.PF-font-tag{
+    color: #de7630;
+	padding: 0px;
+	margin: 0px 0px;    
+	font-size: 14px;
+	word-wrap: break-all;
+	white-space:normal;
+	font-weight: bold;
+}
+
+.PF-font-attribute{
+    color:rgb(147, 169, 95);
+	padding: 0px;
+	margin: 0px 0px;    
+	font-size: 14px;
+	word-wrap: break-all;
+	white-space:normal;
+	font-weight: bold;
+}
+
+.PF-font-sign{
+    color:rgb(170, 174, 171);
+	padding: 0px;
+	margin: 0px 0px;    
+	font-size: 14px;
+	word-wrap: break-all;
+	white-space:normal;
+	font-weight: bold;
+}
+
+.PF-font-value{
+    color:rgb(115, 152, 183);
+	padding: 0px;
+	margin: 0px 0px;    
+	font-size: 14px;
+	word-wrap: break-all;
+	white-space:normal;
+	font-weight: bold;
+}
+
+.PF-font-jstag{
+    color:rgb(115, 152, 183);
+	padding: 0px;
+	margin: 0px 0px;    
+	font-size: 14px;
+	word-wrap: break-all;
+	white-space:normal;
+	font-weight: bold;
+}
+
+.PF-font-jscall{
+    color:rgb(147, 169, 95);
+	padding: 0px;
+	margin: 0px 0px;    
+	font-size: 14px;
+	word-wrap: break-all;
+	white-space:normal;
+	font-weight: bold;
+}
+
+.PF-font-jsfun{
+    color: #bc912f;
+	padding: 0px;
+	margin: 0px 0px;    
+	font-size: 14px;
+	word-wrap: break-all;
+	white-space:normal;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*fonts*/
+
+.font-header-large{    
+  font-family: 'MoPFserrat','Open Sans', sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 1.11111111;
+  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.font-header-large small{    
+  font-weight: 300;
+  font-size: inherit;    
+}
+
+.font-para-15{
+    line-height: 1.73333333;
+    font-family: 'MoPFserrat','Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;    
+}
+
+.font-para-normal-13{
+    line-height: 1.73333333;
+    font-family: 'MoPFserrat','Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;    
+}
+
+.font-sub-20{
+    line-height: 1.73333333;
+    font-family: 'MoPFserrat','Open Sans', sans-serif;
+    font-size: 20px; 
+    font-weight: 600;  
+}
+
+/*fonts*/
+
+
+/*colors*/
+
+.color-darkblue{
+    color: #222533;
+}
+
+.color-lightblue{
+    color: #21c2f8;
+}
+
+.color-black{
+    color: #000000;
+}
+
+.color-darkash{
+    color: rgb(25,22,21);
+}
+
+.color-white{
+    color: #ffffff;
+}
+
+.color-yellow{
+    color: #FCB812;
+}
+
+.color-green{
+    color: #208F5C;
+}
+
+.background-ash{
+    background: #f2f2f2;
+}
+
+.background-white{
+    background: #ffffff;
+}
+
+.background-yellow{
+    background: #FCB812;
+}
+
+.background-yellow-alpha {
+  background: rgba(252, 184, 18, 0.8);
+}
+
+.background-darkblue-alpha{
+    background: rgba(34, 37, 51, 0.8);
+}
+
+/*colors*/
+
+
+
+/*Header Styles*/
+.PF-navbar{
+    height: 75px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+}
+
+.PF-navcontainer{
+    padding: 0px; margin-bottom: 100px;
+}
+
+.PF-navbar-header{
+    padding: 12px 15px 0px 36px;
+    background-color: #fff;
+}
+
+.PF-collapsed-icon{
+    color: rgb(39,39,39);
+    border: none;
+}
+
+.PF-collapsed-icon:hover{
+    background-color: #fff;
+    color: rgb(39,39,39);
+    border: none;
+    cursor: poiPFer;
+}
+
+.PF-collapsed-icon:focus{
+    background-color: #fff;
+    color: rgb(39,39,39);
+    border: none;
+}
+
+.PF-brand{
+    color: #208F5C;
+	font-size: 30px;
+    font-weight: 600;
+    font-family: 'MoPFserrat','Open Sans', sans-serif;
+}
+
+.PF-navbar-ul{
+    padding: 10px 15px;
+    margin: 0px;
+    background-color: #fff;
+}
+
+.PF-navbar-ul > li > a{		
+	font-size: 15px;
+    font-weight: 600;
+    font-family: 'MoPFserrat','Open Sans', sans-serif;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 20px;
+    
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: rgb(25,22,21);
+}
+
+.PF-navbar-ul > li > a:hover{   
+    border-bottom:  2px solid rgb(235,102,86);  
+}
+
+.PF-navbar-ul > li > a:focus{	
+	outline: none;    
+}
+
+.PF-navbar-ul > li > a:link {
+	background-color: transparent;   
+}
+
+@media only screen and (max-width : 768px) {
+    
+    .PF-nav-collapse{
+        border-bottom: 2px solid #000;
+        position: relative;
+        z-index: 1;
+    }
+
+}
+
+/*Header Styles*/
+
+/*Numberd List----------------------------------------*/
+.PF-list{ width:100%; }
+.PF-list ol { 
+    font-family: 'MoPFserrat','Open Sans', sans-serif;
+    font-size: 14px; 
+    color:#000000;  
+    font-weight: 600;  
+}
+
+.PF-list ol li p {      
+    line-height: 1.73333333;
+    font-family: 'MoPFserrat','Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600; 
+    color: #222533;
+}
+/*.num-list ol li p em { display:block; }*/
+
+
+/*Numberd List----------------------------------------*/
+
+
+
+

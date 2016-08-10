@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Porto.js | Options</title>    
+    
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">    
+    
+    <link rel="stylesheet" href="../assets/jquery.porto.css">
+    
+    <!--JS-->
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/rd-smoothscroll.min.js"></script>	
+	
+</head>
+<body>
+    
+<!--navigation-->
+<nav class="navbar navbar-default navbar-fixed-top PF-navbar">
+<div class="container-fluid PF-navcontainer">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header PF-navbar-header">
+<a class="navbar-toggle collapsed PF-collapsed-icon" data-toggle="collapse" data-target="#porto-nav" aria-expanded="false"><i class="fa fa-bars fa-2x"></i></a>    
+<a class="navbar-brand PF-brand" style="color: #208F5C;" href="">Porto.js</a>
+</div>
+
+
+<div class="collapse navbar-collapse PF-nav-collapse" id="porto-nav">     
+<ul class="nav navbar-nav navbar-right PF-navbar-ul">
+<li><a href="../index.html">Home</a></li>
+<li><a href="examples.html">Examples</a></li>
+<li><a href="options.html">Options</a></li>
+<li><a href="">Download</a></li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+    
+<div class="container PF-container PF-fst">
+
+<h2 class="font-header-large color-darkash">Options <small class="color-yellow"></small></h2>
+<p class="font-para-15 color-darkblue">
+    Options helps to customize the plugin and create different types of portfolios according to your specific needs.
+</p>
+    
+<h4 class="font-sub-20">1. columns</h4>
+<p class="font-para-normal-13 color-darkblue">
+Number of columns in a row
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">4</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">integer</span>
+
+</pre> 
+    
+<h4 class="font-sub-20">2. mode</h4>
+<p class="font-para-normal-13 color-darkblue">
+Type of portfolio
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">"image"</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">"image", "video"</span>
+
+</pre>
+    
+<h4 class="font-sub-20">3. margin</h4>
+<p class="font-para-normal-13 color-darkblue">
+space between each box
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">2</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">integer</span>
+
+</pre>
+    
+<h4 class="font-sub-20">4. caption</h4>
+<p class="font-para-normal-13 color-darkblue">
+If <code>true</code>, allow caption on each portfolio
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">true</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">boolean (true / false)</span>
+
+</pre>
+    
+<h4 class="font-sub-20">5. captionMode</h4>
+<p class="font-para-normal-13 color-darkblue">
+Type of caption. Captions are derived from the image's/video's data attributes. Note: when it comes to small devices it may not display the text
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">"icon"</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">"title", "text", "icon", "title|text"</span>
+
+</pre>
+    
+    
+<h4 class="font-sub-20">6. background</h4>
+<p class="font-para-normal-13 color-darkblue">
+Background color of caption
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">"rgba(255,0,0,0.7)"</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">string</span>
+
+</pre>
+
+<h4 class="font-sub-20">7. textColor</h4>
+<p class="font-para-normal-13 color-darkblue">
+Font color of caption title and text
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">"#fff"</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">string</span>
+
+</pre>   
+ 
+<h4 class="font-sub-20">8. captionFit</h4>
+<p class="font-para-normal-13 color-darkblue">
+If <code>true</code>, allow caption to fit to the box size
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">false</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">boolean (true / false)</span>
+
+</pre>     
+
+
+<h4 class="font-sub-20">9. animateCaption</h4>
+<p class="font-para-normal-13 color-darkblue">
+If <code>true</code>, allow animation on caption title, text or icon (It will slide in from the top)
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">false</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">boolean (true / false)</span>
+
+</pre>
+    
+<h4 class="font-sub-20">10. animation</h4>
+<p class="font-para-normal-13 color-darkblue">
+Type of animation on the portfolio
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">"pf-fade"</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">"pf-zoomin", "pf-zoomout", "pf-flip-left", "pf-flip-right", "pf-flip-up", "pf-flip-down", "pf-flip-rotate", "pf-fade", </span>
+<span class="PF-font-tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span> </span><span class="PF-font-value">"pf-popup", "pf-slide-up", "pf-slide-down", "pf-slide-left", "pf-slide-right", "pf-move-left", "pf-move-right", "pf-hide"</span>
+
+</pre> 
+    
+
+<h4 class="font-sub-20">11. clickEventOn</h4>
+<p class="font-para-normal-13 color-darkblue">
+Element that click event is added on
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">"box"</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">"box", "caption", "icon"</span>
+
+</pre>
+    
+<h4 class="font-sub-20">12. onclickAction</h4>
+<p class="font-para-normal-13 color-darkblue">
+Action which is triggered after the click
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">"popup"</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">"popup", "url", "none"</span>
+
+</pre>
+    
+<h4 class="font-sub-20">13. linkTarget</h4>
+<p class="font-para-normal-13 color-darkblue">
+Defines the way of opening an URL. Note: only used if <code>onclickAction: "url"</code>
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">"new"</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">"same", "new"</span>
+
+</pre>
+    
+<h4 class="font-sub-20">14. backdropColor</h4>
+<p class="font-para-normal-13 color-darkblue">
+Background color of popup backdrop
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">"rgba(0,0,0,0.7)"</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">string</span>
+
+</pre>
+    
+<h4 class="font-sub-20">15. popupSize</h4>
+<p class="font-para-normal-13 color-darkblue">
+Size of the popup modal. Note: only used if <code>onclickAction: "popup"</code>
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">"medium"</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">"small", "medium", "large"</span>
+
+</pre>
+    
+<h4 class="font-sub-20">16. controls</h4>
+<p class="font-para-normal-13 color-darkblue">
+If <code>true</code>, allow all controls on popup window
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">true</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">boolean (true / false)</span>
+
+</pre>
+    
+<h4 class="font-sub-20">17. closeController</h4>
+<p class="font-para-normal-13 color-darkblue">
+If <code>true</code>, allow close button on popup window
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">true</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">boolean (true / false)</span>
+
+</pre>
+    
+    
+<h4 class="font-sub-20">18. navController</h4>
+<p class="font-para-normal-13 color-darkblue">
+If <code>true</code>, allow navigation buttons on popup window
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">true</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">boolean (true / false)</span>
+
+</pre>  
+    
+<h4 class="font-sub-20">19. fixedNavigation</h4>
+<p class="font-para-normal-13 color-darkblue">
+If <code>true</code>, allow navigation buttons to stay fixed on popup window
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">true</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">boolean (true / false)</span>
+
+</pre>
+    
+<h4 class="font-sub-20">20. backdropClose</h4>
+<p class="font-para-normal-13 color-darkblue">
+If <code>true</code>, allow to close the popup window by click on backdrop
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">true</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">boolean (true / false)</span>
+
+</pre>
+    
+<h4 class="font-sub-20">21. closeOnEsc</h4>
+<p class="font-para-normal-13 color-darkblue">
+If <code>true</code>, allow to close the popup window by press on Escape button
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">true</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">boolean (true / false)</span>
+
+</pre>
+    
+    
+<h4 class="font-sub-20">22. responsive</h4>
+<p class="font-para-normal-13 color-darkblue">
+If <code>true</code>, allow to resize the portfolio grid auto. Note: Useful if you need to use fixed number of columns
+</p>   
+    
+<pre class="PF-code-container-short">
+<span class="PF-font-tag">default:</span><span> </span><span class="PF-font-value">true</span>
+<span class="PF-font-tag">options:</span><span> </span><span class="PF-font-value">boolean (true / false)</span>
+
+</pre>
+
+
+</div>
+    
+<div class="container PF-container">
+    
+    
+    
+    
+</div>    
+
+   
+    
+    
+
+    
+    
+    
+    
+    
+    
+<!--javascripts-->
+<script src="js/bootstrap.min.js"></script>
+    
+</body>
+</html>
